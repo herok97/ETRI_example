@@ -114,8 +114,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ////////////////////////////
-        autoVoiceRecorder = new AutoVoiceReconizer( handler );
-        autoVoiceRecorder.startLevelCheck();
+//        autoVoiceRecorder = new AutoVoiceReconizer( handler );
+//        autoVoiceRecorder.startLevelCheck();
 
 
 

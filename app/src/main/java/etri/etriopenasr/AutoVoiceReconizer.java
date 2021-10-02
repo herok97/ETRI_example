@@ -56,19 +56,21 @@ public class AutoVoiceReconizer {
 	private int cnt = 0;// д╚©Нем
 	
 	private boolean voiceReconize = false;
-	
-	public AutoVoiceReconizer(Handler handler ){
-		this.handler = handler;
-		File path = new File(
-				Environment.getExternalStorageDirectory().getAbsolutePath()
-						+ "/sdcard/meditest/");
-		path.mkdirs();
-		try {
-			recordingFile = File.createTempFile("recording", ".pcm", path);
-		} catch (IOException e) {
-			throw new RuntimeException("Couldn't create file on SD card", e);
-		}	
-	}
+
+
+
+//	public AutoVoiceReconizer(Handler handler ){
+//		this.handler = handler;
+//		File path = new File(
+//				Environment.getExternalStorageDirectory().getAbsolutePath()
+//						+ "/sdcard/meditest/");
+//		path.mkdirs();
+//		try {
+//			recordingFile = File.createTempFile("recording", ".pcm", path);
+//		} catch (IOException e) {
+//			throw new RuntimeException("Couldn't create file on SD card", e);
+//		}
+//	}
 	
 	public void startLevelCheck(){
 		voiceReconize = false;
