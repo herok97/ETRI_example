@@ -6,7 +6,7 @@ import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 //import android.util.Log;
-
+import android.util.Base64;
 import android.view.inputmethod.EditorInfo;
 import android.view.KeyEvent;
 import android.view.View;
@@ -57,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
     int lenSpeech = 0;
     boolean isRecording = false;
     boolean forceStop = false;
+
+
+    private AutoVoiceReconizer autoVoiceRecorder;
 
     private final Handler handler = new Handler() {
         @Override
@@ -109,6 +112,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ////////////////////////////
+        autoVoiceRecorder = new AutoVoiceReconizer( handler );
+        autoVoiceRecorder.startLevelCheck();
+
+
 
         buttonStart = (Button)findViewById(R.id.buttonStart);
         textResult = (TextView)findViewById(R.id.textResult);
