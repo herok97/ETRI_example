@@ -281,6 +281,8 @@ public class MainActivity extends AppCompatActivity {
         Map<String, Object> request = new HashMap<>();
         Map<String, String> argument = new HashMap<>();
 
+        System.out.println("speechData" + speechData.length);
+        System.out.println("lenSpeech" + lenSpeech * 2);
         audioContents = Base64.encodeToString(
                 speechData, 0, lenSpeech*2, Base64.NO_WRAP);
 
